@@ -1,2 +1,2 @@
-# City-Technology
-Link to show the geog file: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/OTTBDX
+# Urban Economic Fitness and Complexity from Patent Data
+Data and codes of the paper "Urban Economic Fitness and Complexity from Patent Data"
