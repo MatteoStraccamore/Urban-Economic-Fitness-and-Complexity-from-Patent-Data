@@ -1,9 +1,19 @@
-import pandas as pd
 import numpy as np
 from scipy.stats import spearmanr
 
 
-
+# Computation of RCA
+def rca(biadjm):
+    RCA = np.zeros_like(biadjm, dtype=float)
+    rows_degrees = biadjm.sum(axis=1)
+    cols_degrees = biadjm.sum(axis=0)
+    tot_degrees = biadjm.sum()
+    for i in range(np.shape(biadjm)[0]):
+        if rows_degrees[i] != 0:
+            for j in range(np.shape(biadjm)[1]):
+                if cols_degrees[j] != 0:
+                    RCA[i,j] = (biadjm[i, j] / rows_degrees[i]) / (cols_degrees[j] / tot_degrees)
+    return RCA
 
 
 # Computation of Fitness and Complexity
